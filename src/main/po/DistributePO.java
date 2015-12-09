@@ -1,7 +1,6 @@
 ﻿package main.po;
-import java.io.Serializable;
 
-public class DistributePO extends Receipt implements Serializable{
+public class DistributePO extends Receipt{
 
 	/**
 	 * 
