@@ -1,4 +1,5 @@
 ﻿package main.po;
+
 import java.io.Serializable;
 
 public class ReceivePO extends Receipt implements Serializable{
