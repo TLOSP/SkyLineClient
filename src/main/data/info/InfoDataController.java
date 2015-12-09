@@ -3,9 +3,11 @@ package main.data.info;
 import main.dataservice.InfoDataService;
 import main.po.DriverInfoPO;
 import main.po.DriverList;
+import main.po.InstitutionPO;
 import main.po.IntermediateInfo;
 import main.po.LobbyInfo;
 import main.po.LobbyInfoList;
+import main.po.StaffListPO;
 import main.po.VehicleInfoPO;
 import main.po.VehicleListPO;
 import main.po.WarehouseInfo;
@@ -17,6 +19,17 @@ public class InfoDataController implements InfoDataService {
 
 	Client client;
 	@Override
+	public StaffListPO readStaff(String unitCode) {
+		StaffListPO poList = new StaffListPO();
+		WorkerPO workerPO = new WorkerPO(unitCode, unitCode, unitCode, unitCode, unitCode);
+		poList.add(workerPO);
+		client=MainController.getClient();
+		poList.setKey("Inquire");
+		client.writeReceipt(poList);
+		return (StaffListPO)client.getResponse();
+	}
+
+	@Override
 	public boolean createNewStaff(WorkerPO workerPO) {
 		// TODO Auto-generated method stub
 		client=MainController.getClient();
@@ -27,8 +40,11 @@ public class InfoDataController implements InfoDataService {
 
 	@Override
 	public boolean deleteStaff(String account) {
-		// TODO Auto-generated method stub
-		return false;
+		WorkerPO workerPO = new WorkerPO(account, account, account, account, account);
+		client=MainController.getClient();
+		workerPO.setKey("Delete");
+		client.writeReceipt(workerPO);
+		return true;
 	}
 
 	@Override
@@ -38,12 +54,6 @@ public class InfoDataController implements InfoDataService {
 		workerPO.setKey("Inquire");
 		client.writeReceipt(workerPO);
 		return (WorkerPO) client.getResponse();
-	}
-
-	@Override
-	public boolean modifyStaff(WorkerPO workerPO) {
-		// TODO Auto-generated method stub
-		return false;
 	}
 
 	@Override
@@ -214,15 +224,8 @@ public class InfoDataController implements InfoDataService {
 		client.writeReceipt(po);
 		return false;
 	}
-
 	@Override
-	public boolean readStaff(String unitCode) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean delStaff(WorkerPO workerPO) {
+	public boolean modifyStaff(WorkerPO workerPO) {
 		// TODO Auto-generated method stub
 		return false;
 	}
