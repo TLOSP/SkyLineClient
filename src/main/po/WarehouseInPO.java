@@ -33,19 +33,25 @@ public class WarehouseInPO extends Receipt{
 		this.position = position;
 	}
 
-	public WarehouseInPO(String a,String co,String b,String c,String d,int e,int f,int g,String h){
-		bar = a;
-		code = co;
-		inDate = b;
-		destination = c;
-		area = d;
-		row = e;
-		shelf = f;
-		position = g;
-		damageCondition=h;
-	}
+	
 
 	
+	
+
+	public WarehouseInPO(String bar, String code, String date, String destination, String area, int row, int shelf,
+			int position, String damageCondition) {
+		super();
+		this.bar = bar;
+		this.code = code;
+		this.inDate = date;
+		this.destination = destination;
+		this.area = area;
+		this.row = row;
+		this.shelf = shelf;
+		this.position = position;
+		this.damageCondition = damageCondition;
+	}
+
 	public String getDate() {
 		return date;
 	}

@@ -1,5 +1,7 @@
 ﻿package main.po;
 
+
+
 public class ReceivePO extends Receipt{
 
 	/**
@@ -7,11 +9,11 @@ public class ReceivePO extends Receipt{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	String bar;
-	String receivorName;
-	String receivorPhone;
-	String courierCode;
-	String receiveDate;
+	private String bar;
+	private String receivorName;
+	private String receivorPhone;
+	private String courierCode;
+	private String receiveDate;
 	public ReceivePO(String bar, String receivorName, String receivorPhone,
 			String courierCode, String receiveDate) {
 		super();
