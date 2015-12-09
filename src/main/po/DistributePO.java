@@ -1,13 +1,13 @@
-package main.po;
+﻿package main.po;
 import java.io.Serializable;
 
 public class DistributePO extends Receipt implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 
-	private String bar;//娲句欢鍗曞彿
-	private String courierName;//娲鹃�佸憳濮撳悕
-	private String orderCode;//订单号
+	private String bar;
+	private String courierName;
+	private String orderCode;
 	private String guestName;
 	private String guestAddress;
 	private String guestPhoneNumber;

@@ -1,4 +1,4 @@
-package main.po;
+﻿package main.po;
 import java.io.Serializable;
 
 public class WarehouseInPO extends Receipt implements Serializable{
@@ -6,9 +6,7 @@ public class WarehouseInPO extends Receipt implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-/*
- * 入库单及入库信息
- */
+
 	private String bar;//订单号
 	private String code;//入库单号
 	private String date;
