@@ -1,4 +1,4 @@
-﻿package main.po;
+package main.po;
 
 public class WarehouseInPO extends Receipt{
 	/**
