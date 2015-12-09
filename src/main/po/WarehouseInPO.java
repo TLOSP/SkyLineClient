@@ -2,13 +2,13 @@
 import java.io.Serializable;
 
 public class WarehouseInPO extends Receipt implements Serializable{
-/**
+	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private String bar;//订单号
-	private String code;//入库单号
+	private String bar;
+	private String code;
 	private String date;
 	private String inDate;
 	private String destination;
